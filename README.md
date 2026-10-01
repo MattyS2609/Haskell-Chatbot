@@ -16,6 +16,29 @@ interactive terminal REPL.
 	league position.
 - Formats numbers, dates, fixtures, and league standings for terminal output.
 
+## Commands
+
+Enter one request at a time at the chatbot prompt. Requests are case-sensitive
+and must use the punctuation shown below.
+
+| Request | Example |
+| --- | --- |
+| Greeting | `Hello` |
+| Current day | `What day is it?` |
+| Tomorrow's day | `What day is it tomorrow?` |
+| Days since a date | `How long ago was 2024-01-01?` |
+| Calculate an expression | `What is twenty plus five times two?` |
+| Store a calculated value | `Let total equal ten plus five.` |
+| Remember a fact | `Remember that Matthew is a Haskell programmer.` |
+| Recall a fact | `Tell me about Matthew.` |
+| Next Premier League fixture | `Who is Chelsea playing next?` |
+| Premier League position | `What position are Chelsea in the Premier League?` |
+
+Calculations support the `plus`, `minus`, and `times` operators, and numbers
+must be written in words. A calculated result can be reused with the variable
+name `that` or with a name assigned using `Let`. Football commands require an
+`API_KEY` for football-data.org, which should be stored in a .env file.
+
 ## Project Structure
 
 - `app/Main.hs` starts the application and initialises the terminal and
